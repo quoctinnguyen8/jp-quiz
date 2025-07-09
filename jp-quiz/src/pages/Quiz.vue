@@ -168,7 +168,7 @@ const quizQuestions = ref([]);
 // Computed properties
 const currentQuestion = computed(() => quizQuestions.value[currentQuestionIndex.value]);
 const progressPercent = computed(() => 
-    quizQuestions.value.length > 0 ? ((currentQuestionIndex.value) / quizQuestions.value.length) * 100 : 0
+    quizQuestions.value.length > 0 ? ((currentQuestionIndex.value + 1) / quizQuestions.value.length) * 100 : 0
 );
 const allQuestionsAnswered = computed(() => 
     userAnswers.value.length === quizQuestions.value.length && 
